@@ -1,7 +1,13 @@
 package fr.devavance.tp_springboot_mvc_jpa.beans;
 
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "employees")
 public class Employee {
-    private int id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
     private String name;
     private String address;
     private String email;
@@ -10,7 +16,7 @@ public class Employee {
 
     public Employee(){}
 
-    public Employee(int id, String name, String address, String email, String phone, Fonction fonction) {
+    public Employee(Long id, String name, String address, String email, String phone, Fonction fonction) {
         this.id = id;
         this.name = name;
         this.address = address;
@@ -19,11 +25,11 @@ public class Employee {
         this.fonction = fonction;
     }
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
