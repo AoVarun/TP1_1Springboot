@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Liste des Employés</title>
+
+
+</head>
+<body>
+<h1>Liste des Employés</h1>
+<ul th:each="employee: ${employees}">
+    <li th:attr="style=${'background:' + employee.fonction.codeCouleur}"
+        th:text="${employee.name}"></li>
+</ul>
+<h1>Ajouter un nouveau employé</h1>
+<form th:action="@{/addemployee}" th:object="${employee}" method="post">
+    <label for="name">Nom:</label>
+    <input th:field="*{name}" id="name" type="text" placeholder="Nom" required/>
+    <br>
+
+    <label for="address">Adresse:</label>
+    <input th:field="*{address}" id="address" type="text" placeholder="Adresse" required/>
+    <br>
+
+    <label for="email">Email:</label>
+    <input th:field="*{email}" id="email" type="email" placeholder="Email" required/>
+    <br>
+
+    <label for="phone">Téléphone:</label>
+    <input th:field="*{phone}" id="phone" type="text" placeholder="Téléphone" required/>
+    <br>
+
+    <label for="color">Fonction</label>
+    <select name="color" id="color" th:field="*{fonction}">
+        <option th:each="fonction : ${T(fr.devavance.tp_springboot_mvc_jpa.beans.Fonction).values()}"
+                th:value="${fonction}" th:text="${fonction}"></option>
+    </select>
+
+    <div>
+        <button type="submit">Ajouter</button>
+    </div>
+</form>
+</body>
+</html>
