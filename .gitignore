@@ -31,3 +31,7 @@ build/
 
 ### VS Code ###
 .vscode/
+employees_db_1.mv.db
+employees_db_1.trace.db
+employees_db_2.mv.db
+employees_db_2.trace.db
