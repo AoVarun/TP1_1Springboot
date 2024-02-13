@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Page d'un employé</title>
+</head>
+<body>
+<h1>PAGE DE L'EMPLOYEE</h1>
+<span>Id employée: <span th:href="@{/employee/{id}(id=${employee.id})}" th:text="${employee.id}"></span></span><br>
+<span>Nom de l'employée: <span th:href="@{/employee/{id}(id=${employee.id})}" th:text="${employee.name}"></span></span><br>
+<span>Adresse de l'employée: <span th:href="@{/employee/{id}(id=${employee.id})}" th:text="${employee.address}"></span></span><br>
+<span>Email de l'employée: <span th:href="@{/employee/{id}(id=${employee.id})}" th:text="${employee.email}"></span></span><br>
+<span>Téléphone de l'employée: <span th:href="@{/employee/{id}(id=${employee.id})}" th:text="${employee.phone}"></span></span><br>
+<a th:text="Home" th:href="@{/employees}"></a>
+</body>
+</html>

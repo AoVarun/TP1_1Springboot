@@ -14,7 +14,7 @@
         th:text="${employee.name}"></li>
 </ul>
 <h1>Ajouter un nouveau employé</h1>
-<form th:action="@{/addemployee}" th:object="${employee}" method="post">
+<form th:action="@{/employee/addemployee}" th:object="${employee}" method="post">
     <label for="name">Nom:</label>
     <input th:field="*{name}" id="name" type="text" placeholder="Nom" required/>
     <br>
