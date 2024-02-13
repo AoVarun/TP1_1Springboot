@@ -1,6 +1,7 @@
-package fr.devavance.tp_springboot_mvc_jpa.controllers;
+package fr.devavance.tp_springboot_mvc_jpa.controllers.implementation;
 
-import fr.devavance.tp_springboot_mvc_jpa.beans.Employee;
+import fr.devavance.tp_springboot_mvc_jpa.entity.Employee;
+import fr.devavance.tp_springboot_mvc_jpa.controllers.IEmployeeController;
 import fr.devavance.tp_springboot_mvc_jpa.repository.IEmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -9,8 +10,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-
-import java.util.Optional;
 
 @Controller
 public class EmployeeControleur implements IEmployeeController {

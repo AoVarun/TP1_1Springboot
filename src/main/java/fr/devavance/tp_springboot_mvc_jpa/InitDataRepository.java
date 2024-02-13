@@ -1,5 +1,7 @@
-package fr.devavance.tp_springboot_mvc_jpa.beans;
+package fr.devavance.tp_springboot_mvc_jpa;
 
+import fr.devavance.tp_springboot_mvc_jpa.entity.Employee;
+import fr.devavance.tp_springboot_mvc_jpa.enumeration.Fonction;
 import fr.devavance.tp_springboot_mvc_jpa.repository.IEmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;

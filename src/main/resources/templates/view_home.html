@@ -33,7 +33,7 @@
 
     <label for="color">Fonction</label>
     <select name="color" id="color" th:field="*{fonction}">
-        <option th:each="fonction : ${T(fr.devavance.tp_springboot_mvc_jpa.beans.Fonction).values()}"
+        <option th:each="fonction : ${T(fr.devavance.tp_springboot_mvc_jpa.enumeration.Fonction).values()}"
                 th:value="${fonction}" th:text="${fonction}"></option>
     </select>
 

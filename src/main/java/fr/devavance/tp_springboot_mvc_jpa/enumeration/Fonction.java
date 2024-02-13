@@ -1,4 +1,4 @@
-package fr.devavance.tp_springboot_mvc_jpa.beans;
+package fr.devavance.tp_springboot_mvc_jpa.enumeration;
 
 public enum Fonction {
         CHEF_PROJET("blue"),
